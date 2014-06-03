@@ -21,6 +21,8 @@ class Game
       puts "Too low!"
     elsif guess > @number
       puts "Too high!"
+    else
+      puts "You shouldn't be able to see this!"
     end
     @guesses += 1
   end
@@ -40,4 +42,4 @@ class Game
 end
 
 game = Game.new
-game.play
+game.play # or Game.new.play? 
