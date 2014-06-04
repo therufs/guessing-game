@@ -1,4 +1,4 @@
-# Play a guessing game! 
+# Play a guessing game!
 class Game
   def initialize
     @number = 1 + rand(100)
@@ -19,10 +19,8 @@ class Game
       @win = true
     elsif guess < @number
       puts "Too low!"
-    elsif guess > @number
-      puts "Too high!"
     else
-      puts "You shouldn't be able to see this!"
+      puts "Too high!"
     end
     @guesses += 1
   end
@@ -33,7 +31,7 @@ class Game
       round
       puts "Guess again." if @win == false && @guesses < @guessmax
     end
-    if @win 
+    if @win
       puts "A winner is you!"
     else
       puts "Out of guesses!"
@@ -42,4 +40,4 @@ class Game
 end
 
 game = Game.new
-game.play # or Game.new.play? 
+game.play # or Game.new.play?
