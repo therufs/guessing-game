@@ -25,11 +25,15 @@ class Game
     @guesses += 1
   end
 
+  def continue
+    @guesses < @guessmax && @win == false
+  end
+
   def play
     puts "Guess a number between 1 and 100."
-    while @guesses < @guessmax && @win == false
+    while continue
       round
-      puts "Guess again." if @win == false && @guesses < @guessmax
+      puts "Guess again." if continue
     end
     if @win
       puts "A winner is you!"
